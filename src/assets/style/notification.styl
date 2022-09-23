@@ -1,0 +1,68 @@
+.notifications,
+.vue-notification-group
+  max-width 100%
+  padding 0 25px
+
+  .notification-wrapper,
+  .vue-notification-wrapper
+    overflow visible
+
+.vue-notification-wrapper  
+  .vue-notification,
+  .vue-notification.error,
+  .vue-notification.warning,
+  .vue-notification.success
+    background-color rgba(255, 255, 255, .8) !important
+    backdrop-filter blur(5px)
+    border-width 0
+    border-radius 12px
+    box-shadow 0 5px 50px rgba(0, 0, 0, .1)
+    color #556a81
+    font-size 16px
+    margin-top 30px
+    padding 20px
+    position relative
+    padding-left 80px
+
+    &:before
+      background: url('../../assets/images/bell.svg') center 24px / contain  no-repeat
+      content ''
+      height 100%
+      left 20px
+      position absolute
+      top 0
+      width 40px
+
+
+    &.warning:before
+      background: url('../../assets/images/001-warning-sign.svg') center 24px / contain  no-repeat
+
+    &.error:before
+      background: url('../../assets/images/002-close.svg') center 24px / contain  no-repeat
+
+    &.success:before
+      background: url('../../assets/images/003-check.svg') center 24px / contain  no-repeat
+
+@media screen and (max-width 600px)
+  .vue-notification-wrapper
+    left 5%
+    opacity 0
+    max-width 90%
+    position absolute
+
+  .vue-notification-wrapper:nth-child(1)
+    opacity 1
+    z-index 6
+    transform scale(1)
+
+  .vue-notification-wrapper:nth-child(2)
+    top 20px
+    z-index 4
+    opacity .8
+    transform scale(.9)
+
+  .vue-notification-wrapper:nth-child(3)
+    top 40px
+    z-index 2
+    opacity .6
+    transform scale(.8)

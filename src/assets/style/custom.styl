@@ -1,0 +1,109 @@
+@import './sweetAlert.styl'
+@import './fonts.styl'
+@import './buttons.styl'
+
+*
+  font-family 'Lato', sans-serif
+
+.v-application
+  .v-application--wrap
+    padding-bottom 80px
+  
+  @import './table.styl'
+  @import './timeline.styl'
+  @import './animation.styl'
+
+  label
+    color rgba(0, 0, 0, 0.6)
+
+  h1, h2, h3, p, .b-text span:not(.v-btn__content)
+    color rgba(0, 0, 0, .5)
+  
+  $shadow = 0 7px 30px -4px rgba(150,170,180,0.5)
+
+  .box-glass
+    border-radius 8px
+    box-shadow $shadow
+    backdrop-filter blur(5px)
+    background rgba(255, 255, 255, .9)
+  
+  .v-sheet.v-card:not(.v-sheet--outlined),
+  .v-stepper
+    border-radius 12px
+    box-shadow none
+
+    .v-stepper__header
+      box-shadow none
+      border-bottom 1px solid #e8eaf6
+
+  .v-menu__content
+    @extends .box-glass
+
+  .show-xs,
+  .show-xs-400
+    display none
+
+  .v-btn--float,
+  .v-btn--float-2
+    z-index 3
+    right 12px
+    bottom 12px
+    position fixed
+    box-shadow $shadow
+    animation scaleIn .15s
+
+  .v-btn--float-2
+    right 20px
+    bottom 85px
+
+  .float-button-group
+    left 12px
+    right 12px
+    height 56px
+    bottom 12px
+    padding 12px
+    display flex
+    position fixed
+    border-radius 8px
+    align-items center
+    box-shadow $shadow
+    animation slideTop .15s
+    width calc(100% - 95px)
+    backdrop-filter blur(5px)
+    background rgba(255, 255, 255, .9)
+
+  @media screen and (max-width 400px)
+    .hide-xs-400
+      display none
+
+    .show-xs-400
+      display block
+
+  @media screen and (max-width 600px)
+    .hide-xs
+      display none
+
+    .show-xs
+      display block
+    
+    .v-chip
+      padding 7px 12px
+      white-space normal
+    
+    .v-chip.v-size--default
+      height auto
+
+    .float-button-group-xs
+      left 12px
+      height 56px
+      bottom 12px
+      padding 12px
+      display flex
+      position fixed
+      border-radius 8px
+      align-items center
+      box-shadow $shadow
+      animation slideTop .15s
+      width calc(100% - 95px)
+      backdrop-filter blur(5px)
+      background rgba(255, 255, 255, .9)

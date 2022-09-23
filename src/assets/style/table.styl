@@ -1,0 +1,56 @@
+.v-data-table > .v-data-table__wrapper > table,
+.v-data-table > .v-data-table__wrapper > table
+  .v-data-table-header-mobile
+    display none
+  
+  tbody,
+  thead
+    tr:last-child > th,
+    tr:not(:last-child) > td:not(.v-data-table__mobile-row),
+    tr:not(:last-child) > th
+      border none
+
+    td
+      padding-top 10px
+      padding-bottom 10px
+
+    td:not(.v-data-table__mobile-row):first-child
+      border-radius 8px 0 0 8px
+
+    td:not(.v-data-table__mobile-row):last-child
+      border-radius 0 8px 8px 0
+
+    tr:nth-child(2n + 1)
+      td:not(.v-data-table__mobile-row)
+        background rgba(248, 248, 251, .6)
+
+    // MOBILE
+    .v-data-table__mobile-row
+      display block
+      padding 10px 10px 0 10px
+
+      .v-data-table__mobile-row__cell
+        text-align left
+
+    .v-data-table__mobile-row:last-child
+      padding-bottom 20px
+
+    .v-data-table__mobile-row:first-child
+      padding-top 20px
+
+    .v-data-table__mobile-table-row:first-child
+      .v-data-table__mobile-row
+        padding-top 10px
+
+    @media screen and (min-width 600px)
+      .v-btn
+        visibility hidden
+
+    tr:hover
+      .v-btn
+        visibility visible
+
+
+// PAGINATION
+.v-pagination__item
+  box-shadow none
