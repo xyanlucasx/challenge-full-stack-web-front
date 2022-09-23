@@ -1,0 +1,5 @@
+import '@/plugins/api'
+import '@/plugins/toast'
+import '@/plugins/modal'
+import '@/plugins/eventBus'
+import '@/plugins/mdijs'
