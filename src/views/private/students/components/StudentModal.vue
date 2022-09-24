@@ -173,7 +173,7 @@ export default {
       if (this.update) {
         this.populateStudentInfo()
       }
-    }, 0)
+    }, 500)
   }
 }
 </script>
