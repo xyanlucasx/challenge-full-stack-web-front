@@ -126,7 +126,8 @@ export default {
         }
       } catch (error) {
         this.$toast({
-          text: 'Erro ao cadastrar aluno',
+          text:
+            'Erro ao cadastrar aluno, verifique se o RA já não está cadastrado',
           type: 'error',
           duration: 3000
         })
